@@ -23,8 +23,9 @@ const configDefaults = {
 };
 
 /**
- * 
- * 
+ * Returns a random variation on the provided template
+ *
+ * @function
  * @param {VariationConfig} template The template with variation groups
  * @param {object} config A configuration object to change the behaviour of the function
  * @param {Function} config.randomFn Used to choose a variation inside each group. Defaults to `Math.random`.

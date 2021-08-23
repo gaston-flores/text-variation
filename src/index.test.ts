@@ -15,7 +15,7 @@ test("calls `randomFn` if provided", () => {
   expect(mockRandom).toHaveBeenCalledTimes(2);
 });
 
-test("returns a consistent string when using a seeded result", () => {
+test("returns a consistent string when using a seeded generator", () => {
   const seeded = seedrandom("varying-text-test");
   const template = "{Hey|Hello} Mike, {how are you?|nice to meet you!}";
   const result = getVariation(template, { randomFn: seeded });
