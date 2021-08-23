@@ -1,4 +1,4 @@
-import getVariation from "./index";
+import getVariation from "./getVariation";
 import seedrandom from "seedrandom";
 
 test("returns a string", () => {
