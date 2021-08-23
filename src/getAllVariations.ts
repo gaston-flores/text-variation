@@ -38,6 +38,16 @@ function recursiveGeneration(
   }
 }
 
+/**
+ * Returns all variations of the provided template
+ *
+ * @function
+ * @param {VariationConfig} template The template with variation groups
+ * @param {object} config A configuration object to change the behaviour of the function
+ * @param {RegExp} config.variationRegex Regex used to detect a variation group. Defaults to `/\{(.*?)\}/g`.
+ * @param {string} config.variationChar Character that separates variations inside a group. Defaults to `|`.
+ * @returns {Array<string>} All variations of the template
+ */
 export function getAllVariations(
   template: string,
   config: Partial<VariationConfig> = {}

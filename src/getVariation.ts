@@ -23,7 +23,7 @@ const configDefaults = {
 };
 
 /**
- * Returns a random variation on the provided template
+ * Returns a random variation of the provided template
  *
  * @function
  * @param {VariationConfig} template The template with variation groups
@@ -31,7 +31,7 @@ const configDefaults = {
  * @param {Function} config.randomFn Used to choose a variation inside each group. Defaults to `Math.random`.
  * @param {RegExp} config.variationRegex Regex used to detect a variation group. Defaults to `/\{(.*?)\}/g`.
  * @param {string} config.variationChar Character that separates variations inside a group. Defaults to `|`.
- * @returns A random variation of the template
+ * @returns {string} A random variation of the template
  */
 export function getVariation(
   template: string,
