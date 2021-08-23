@@ -1,15 +1,5 @@
 "use strict";
-
-export type VariationConfig = {
-  /**
-   * Regex used to detect a variation group. Defaults to `/\{(.*?)\}/g`.
-   */
-  variationRegex: RegExp;
-  /**
-   * Character that separates variations inside a group. Defaults to `|`.
-   */
-  variationChar: string;
-};
+import { VariationConfig } from "./types";
 
 const configDefaults = {
   variationRegex: /\{(.*?)\}/g,
@@ -18,7 +8,7 @@ const configDefaults = {
 
 function recursiveGeneration(
   template: string,
-  config: VariationConfig
+  config: Required<VariationConfig>
 ): string[] {
   const match = config.variationRegex.exec(template);
   if (match) {
@@ -50,7 +40,7 @@ function recursiveGeneration(
  */
 export function getAllVariations(
   template: string,
-  config: Partial<VariationConfig> = {}
+  config: VariationConfig = {}
 ): string[] {
   const { variationRegex, variationChar } = {
     ...configDefaults,

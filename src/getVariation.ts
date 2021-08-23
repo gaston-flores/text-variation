@@ -1,20 +1,13 @@
 "use strict";
+import { VariationConfig } from "./types";
 
-export type VariationConfig = {
+export interface RandomVariationConfig extends VariationConfig {
   /**
    * Function used to generate random numbers. Used to choose a variation inside
    * each group. Defaults to `Math.random`.
    */
   randomFn?: () => number;
-  /**
-   * Regex used to detect a variation group. Defaults to `/\{(.*?)\}/g`.
-   */
-  variationRegex?: RegExp;
-  /**
-   * Character that separates variations inside a group. Defaults to `|`.
-   */
-  variationChar?: string;
-};
+}
 
 const configDefaults = {
   randomFn: Math.random,
@@ -35,7 +28,7 @@ const configDefaults = {
  */
 export function getVariation(
   template: string,
-  config: VariationConfig = {}
+  config: RandomVariationConfig = {}
 ): string {
   const { randomFn, variationRegex, variationChar } = {
     ...configDefaults,
