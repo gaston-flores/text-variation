@@ -44,7 +44,7 @@ Can result in 12 different variations.
 
 Optional. Must be an object. Configuration that can change how the function parses the template and chooses the variations. All properties are optional:
 
-#### config.randomFn (`() => number`)
+#### `config.randomFn: () => number`
 
 Used to choose a variation inside each group. Useful if you'd like to use a seeded generator for consistent results or testing. Defaults to `Math.random`.
 
@@ -57,7 +57,7 @@ const template = "{Hey|Hello} Mike, {how are you?|nice to meet you!}";
 getVariation(template, { randomFn: seeded }); // Will always return "Hey Mike, nice to meet you!"
 ```
 
-#### config.variationRegex (`RegExp`)
+#### `config.variationRegex: RegExp`
 
 Used to find the variation groups inside the template. Defaults to `/\{(.*?)\}/g`.
 
@@ -65,11 +65,11 @@ To work properly, it needs a single capturing group and the global `g` flag. If 
 
 ```ts
 /\{(.*?)\}/g // Default, valid
-/\[(.*?)\]/g // With braces instead of brackets, valid
+/\[(.*?)\]/g // With brackets instead of braces, valid
 /\{.*?\}/g   // No capturing group, will throw an error
-/\{(.*?)\}/  // No global flag, will not match all occurrances on the template
+/\{(.*?)\}/  // No global flag, will not match all occurrances in the template
 ```
 
-#### config.variationChar (`string`)
+#### `config.variationChar: string`
 
 The character that separates variations inside a group. Defaults to `|`.
