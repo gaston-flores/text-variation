@@ -2,12 +2,19 @@
   "name": "varying-text",
   "version": "1.0.0",
   "description": "Generate variations of a given template string",
-  "main": "index.ts",
   "author": "Gaston Flores",
   "license": "MIT",
+  "main": "./lib/cjs/index.js",
+  "module": "./lib/esm/index.js",
+  "files": [
+    "lib/"
+  ],
   "scripts": {
     "prepare": "husky install",
-    "build": "tsc",
+    "prepublishOnly": "yarn build",
+    "build": "yarn build:esm && yarn build:cjs",
+    "build:esm": "tsc -p tsconfig.json ",
+    "build:cjs": "tsc -p tsconfig-cjs.json ",
     "test": "jest src/",
     "prettier": "prettier --write src/",
     "lint": "eslint src/ --fix"
