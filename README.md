@@ -3,7 +3,7 @@
 Generate random variations of a string template.
 
 ```ts
-import getVariation from "variation-generator";
+import getVariation from "text-variation";
 
 getVariation("{Hey|Hello} Mike, {how are you?|nice to meet you!}"); // Will return one of:
 // Hey Mike, how are you?
@@ -17,13 +17,13 @@ getVariation("{Hey|Hello} Mike, {how are you?|nice to meet you!}"); // Will retu
 Using npm
 
 ```bash
-npm install variation-generator
+npm install text-variation
 ```
 
 Using yarn
 
 ```bash
-yarn add variation-generator
+yarn add text-variation
 ```
 
 ## Usage
@@ -49,7 +49,7 @@ Optional. Must be an object. Configuration that can change how the function pars
 Used to choose a variation inside each group. Useful if you'd like to use a seeded generator for consistent results or testing. Defaults to `Math.random`.
 
 ```js
-import getVariation from "variation-generator";
+import getVariation from "text-variation";
 import seedrandom from "seedrandom";
 
 const seeded = seedrandom("varying-text-test");
@@ -79,7 +79,7 @@ The character that separates variations inside a group. Defaults to `|`.
 When creating a new template, it can be useful to know all possible variations. You can use `getAllVariations` to generate every possible variation of a template. Accepts the same config options as `getVariation`.
 
 ```js
-import { getAllVariations } from "variation-generator";
+import { getAllVariations } from "text-variation";
 
 const template = "{Hey|Hello} Mike, {how are you?|nice to meet you!}";
 getAllVariations(template); // ["Hey Mike, how are you?", "Hey Mike, nice to meet you!", "Hello Mike, how are you?", "Hello Mike, nice to meet you!"]

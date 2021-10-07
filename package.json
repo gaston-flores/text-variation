@@ -1,7 +1,25 @@
 {
-  "name": "varying-text",
+  "name": "text-variation",
   "version": "1.0.0",
   "description": "Generate variations of a given template string",
+  "keywords": [
+    "string",
+    "text",
+    "generation",
+    "random",
+    "nlg"
+  ],
+  "homepage": "https://github.com/gaston-flores/text-variation#readme",
+  "bugs": {
+    "url": "https://github.com/gaston-flores/text-variation/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gaston-flores/text-variation"
+  },
+  "engines": {
+    "node": ">=12"
+  },
   "author": "Gaston Flores",
   "license": "MIT",
   "main": "./lib/cjs/index.js",
