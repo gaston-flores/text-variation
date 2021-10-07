@@ -28,7 +28,7 @@
     "lib/"
   ],
   "scripts": {
-    "prepare": "husky install",
+    "prepare": "is-ci || husky install",
     "prepublishOnly": "yarn build",
     "build": "yarn build:esm && yarn build:cjs",
     "build:esm": "tsc -p tsconfig.json ",
@@ -54,12 +54,13 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-jest": "^24.4.0",
     "husky": "^7.0.1",
+    "is-ci": "^3.0.0",
     "jest": "^27.0.6",
     "lint-staged": "^11.1.2",
     "prettier": "^2.3.2",
     "seedrandom": "^3.0.5",
-    "typescript": "^4.3.5",
-    "semantic-release": "^18.0.0"
+    "semantic-release": "^18.0.0",
+    "typescript": "^4.3.5"
   },
   "lint-staged": {
     "src/**/*.ts": [
