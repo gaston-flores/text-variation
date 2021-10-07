@@ -1,4 +1,4 @@
-# Variations
+# text-variation
 
 Generate random variations of a string template.
 

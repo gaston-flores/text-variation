@@ -1,6 +1,6 @@
 {
   "name": "text-variation",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "Generate variations of a given template string",
   "keywords": [
     "string",
@@ -35,7 +35,8 @@
     "build:cjs": "tsc -p tsconfig-cjs.json ",
     "test": "jest src/",
     "prettier": "prettier --write src/",
-    "lint": "eslint src/ --fix"
+    "lint": "eslint src/ --fix",
+    "semantic-release": "semantic-release"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
@@ -57,7 +58,8 @@
     "lint-staged": "^11.1.2",
     "prettier": "^2.3.2",
     "seedrandom": "^3.0.5",
-    "typescript": "^4.3.5"
+    "typescript": "^4.3.5",
+    "semantic-release": "^18.0.0"
   },
   "lint-staged": {
     "src/**/*.ts": [
