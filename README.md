@@ -1,6 +1,6 @@
 # text-variation
 
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/gaston-flores/text-variation/CI)](https://github.com/gaston-flores/text-variation/actions/workflows/workflow.yml)
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/gaston-flores/text-variation/CI)](https://github.com/gaston-flores/text-variation/actions/workflows/release.yml)
 [![npm](https://img.shields.io/npm/v/text-variation)](https://www.npmjs.com/package/text-variation)
 [![npm bundle size](https://img.shields.io/bundlephobia/minzip/text-variation)](https://bundlephobia.com/package/text-variation)
 
