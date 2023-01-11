@@ -4,16 +4,16 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
           node-version: "14"
       - name: Install
-        uses: borales/actions-yarn@v2.3.0
+        uses: borales/actions-yarn@v4
         with:
           cmd: install
       - name: Test
-        uses: borales/actions-yarn@v2.3.0
+        uses: borales/actions-yarn@v4
         with:
           cmd: test
       - name: Release
